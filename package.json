@@ -15,7 +15,8 @@
     "build:umd": "rollup -c rollup.config.umd.js",
     "test": "cross-env NODE_ENV=test nyc mocha",
     "test:watch": "cross-env NODE_ENV=test mocha --watch",
-    "validate": "npm-run-all --parallel test build"
+    "validate": "npm-run-all --parallel test build",
+    "release": "semantic-release pre && npm publish && semantic-release post"
   },
   "author": "Matt B",
   "license": "MIT",
