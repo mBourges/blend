@@ -1,14 +1,21 @@
 language: node_js
-node_js:
-  - "6.9.4"
 cache:
   directories:
-    - "node_modules"
+    - node_modules
+notifications:
+  email: false
+node_js:
+  - '7'
+  - '6'
 before_install:
   - npm install -g rollup
 install:
   - npm install
 script:
   - npm run validate -s
-deploy:
-  - npm run release -s
+after_success:
+  - npm run coverage -s
+  - npm run semantic-release
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/

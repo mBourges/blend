@@ -1,6 +1,6 @@
 {
   "name": "blend",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "",
   "main": "dist/index.js",
   "files": [
@@ -16,7 +16,8 @@
     "test": "cross-env NODE_ENV=test nyc mocha",
     "test:watch": "cross-env NODE_ENV=test mocha --watch",
     "validate": "npm-run-all --parallel test build",
-    "release": "semantic-release pre && npm publish && semantic-release post"
+    "release": "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "author": "Matt B",
   "license": "MIT",
@@ -43,7 +44,8 @@
     "rollup-plugin-replace": "^1.1.1",
     "rollup-plugin-uglify": "^2.0.1",
     "rollup-plugin-uglify-es": "0.0.1",
-    "validate-commit-msg": "^2.14.0"
+    "validate-commit-msg": "^2.14.0",
+    "semantic-release": "^7.0.2"
   },
   "config": {
     "commitizen": {
@@ -75,5 +77,9 @@
   },
   "dependencies": {
     "semantic-release": "^7.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mBourges/blend.git"
   }
 }
