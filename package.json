@@ -1,5 +1,5 @@
 {
-  "name": "forgetools",
+  "name": "blend",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -71,5 +71,8 @@
     "include": [
       "src"
     ]
+  },
+  "dependencies": {
+    "semantic-release": "^7.0.2"
   }
 }
